@@ -65,13 +65,14 @@ $(document).ready(function () {
 
     // Toggle dark/light theme
     $('#image-link').click(function () {
-        var img1_src = "calculator-white.png";
-        var img2_src = "calculator-black.png";
+        const img1_src = "calculator-white.png";
+        const img2_src = "calculator-black.png";
         $('.text-center').toggleClass('toggle');
         $('.form-control').toggleClass('toggle');
         $('.list-group-item').toggleClass('toggle');
         $('.text-left').toggleClass('toggle');
         $('.list-group').toggleClass('toggle');
+        $('.input-group-text').toggleClass('toggle');
 
         if ($("#image").attr("src") == img1_src) {
             $("#image").attr("src", img2_src);

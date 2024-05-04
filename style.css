@@ -1,6 +1,7 @@
 .toggle {
     background-color: #181818 !important;
     color: white !important;
+    border-color: whitesmoke;
 }
 
 .input-group-btn:not(:first-child):not(:last-child) > .btn {
