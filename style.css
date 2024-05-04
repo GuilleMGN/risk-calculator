@@ -2,3 +2,8 @@
     background-color: #181818 !important;
     color: white !important;
 }
+
+.input-group-btn:not(:first-child):not(:last-child) > .btn {
+    border-radius: 0;
+    height: 100%;
+  }

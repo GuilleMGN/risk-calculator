@@ -34,29 +34,39 @@
                             <div class="invalid-feedback"> Valid account balance amount is required. </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="leverage">Leverage:</label>
-                            <input type="number" id="leverage" class="form-control" placeholder="1x" value=""
-                                required="" min="0"><br>
-                            <div class="invalid-feedback"> Valid leverage amount is required. </div>
+                            <label for="leverage">Leverage (x):</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <input type="number" id="leverage" class="form-control" placeholder="1x" value=""
+                                        required="" min="0"><br>
+                                    <span class="input-group-text btn">x</span>
+                                </div>
+                                <div class="invalid-feedback"> Valid leverage amount is required. </div>
+                            </div>
                         </div>
                         <div class="col-md-3 mb-3">
-                            <label for="maxRisk">Risk %:</label>
-                            <input type="number" id="maxRisk" class="form-control" placeholder="1%" value="" required=""
-                                min="0" max="100"><br>
-                            <div class="invalid-feedback"> Valid leverage amount is required. </div>
+                            <label for="maxRisk">Risk (%):</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-append">
+                                    <input type="number" id="maxRisk" class="form-control" placeholder="1%" value=""
+                                        required="" min="0" max="100"><br>
+                                    <span class="input-group-text btn">%</span>
+                                </div>
+                                <div class="invalid-feedback"> Valid leverage amount is required. </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 mb-3">
                             <label for="entryPrice">Entry Price:</label>
-                            <input type="number" id="entryPrice" step=".000000001" class="form-control" placeholder="$0.00"
-                                value="" required="" min="0"><br>
+                            <input type="number" id="entryPrice" step=".000000001" class="form-control"
+                                placeholder="$0.00" value="" required="" min="0"><br>
                             <div class="invalid-feedback"> Valid entry price amount is required. </div>
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="stopLoss">Stop Loss:</label>
-                            <input type="number" id="stopLoss" step=".000000001" class="form-control" placeholder="$0.00"
-                                value="" required="" min="0"><br>
+                            <input type="number" id="stopLoss" step=".000000001" class="form-control"
+                                placeholder="$0.00" value="" required="" min="0"><br>
                             <div class="invalid-feedback"> Valid entry price amount is required. </div>
                         </div>
                     </div>

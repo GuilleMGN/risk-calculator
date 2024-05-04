@@ -1,28 +1,27 @@
 $(document).ready(function () {
     $('#riskForm').submit(function (e) {
         e.preventDefault();
+
+        // Receive assigned user input values
         const accountBalance = parseFloat($('#accountBalance').val());
         const leverage = parseFloat($('#leverage').val());
         const maxRisk = parseFloat($('#maxRisk').val());
         const entryPrice = parseFloat($('#entryPrice').val());
         const stopLoss = parseFloat($('#stopLoss').val());
 
+        // Calculate values
         const riskAmount = accountBalance * (maxRisk / 100);
         const takeProfit = entryPrice + ((entryPrice - stopLoss) * 2);
         const margin = Math.abs((riskAmount / (entryPrice - stopLoss)) * entryPrice / leverage);
         const positionSize = margin * leverage;
         const unitAmount = (positionSize / entryPrice);
 
-        // console.log(accountBalance);
-        // console.log(leverage);
-        // console.log(maxRisk);
-        // console.log(entryPrice);
-        // console.log(stopLoss);
-        // console.log(riskAmount);
-        // console.log(positionSize);
-        // console.log(takeProfit);
-        // console.log(unitAmount);
-        // console.log(margin);
+        // Determine if position is Long or Short
+        if (entryPrice < stopLoss) {
+            const long = false;
+        } else {
+            const long = true;
+        }
 
         // Output results into HTML
         $('#account-balance-output').html(`<span id="account-balance-output" class="text-muted">Account Balance: $${accountBalance.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</span>`);
@@ -64,6 +63,7 @@ $(document).ready(function () {
         });
     });
 
+    // Toggle dark/light theme
     $('#image-link').click(function () {
         var img1_src = "calculator-white.png";
         var img2_src = "calculator-black.png";
@@ -79,6 +79,4 @@ $(document).ready(function () {
             $("#image").attr("src", img1_src);
         }
     });
-
-    // <a type="button" id="copy-margin"></a>
 });
