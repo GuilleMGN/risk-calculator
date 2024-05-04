@@ -8,10 +8,10 @@ $(document).ready(function () {
         const stopLoss = parseFloat($('#stopLoss').val());
 
         const riskAmount = accountBalance * (maxRisk / 100);
-        const positionSize = riskAmount * leverage;
         const takeProfit = entryPrice + ((entryPrice - stopLoss) * 2);
-        const unitAmount = (positionSize / entryPrice);
         const margin = Math.abs((riskAmount / (entryPrice - stopLoss)) * entryPrice / leverage);
+        const positionSize = margin * leverage;
+        const unitAmount = (positionSize / entryPrice);
 
         // console.log(accountBalance);
         // console.log(leverage);
