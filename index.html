@@ -38,7 +38,7 @@
                                 <div class="invalid-feedback"> Valid account balance amount is required. </div>
                             </div>
                         </div>
-                        <div class="col-md-3 mb-3">
+                        <div class="col-md-3 col-6 mb-3">
                             <label for="leverage">Leverage (x):</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
@@ -49,7 +49,7 @@
                                 <div class="invalid-feedback"> Valid leverage amount is required. </div>
                             </div>
                         </div>
-                        <div class="col-md-3 mb-3">
+                        <div class="col-md-3 col-6 mb-3">
                             <label for="maxRisk">Risk (%):</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
@@ -90,17 +90,18 @@
                     <button class="btn btn-lg btn-danger" type="reset">Clear All</button>
                 </form>
             </div>
-            <!-- Consider adding Asset dropdown -->
+            <!-- Consider adding Settings dropdown -->
             <!-- Consider adding Asset prices real-time API -->
             <!-- Consider adding Real-Time Price or Trigger price -->
             <!-- Consider adding TP Risk-Reward ratio slider -->
             <!-- Consider adding Liquidation Price -->
             <!-- Consider adding Long or Short indicator -->
-            <!-- Consider adding Risk Amount instead of % -->
+            <!-- Consider adding Risk $ instead of % -->
 
             <div id="results" class="col-md-4 order-md-2 mb-4 text-left">
-                <h4 class="d-flex justify-content-between align-items-center mb-3">
-                    <span>Results</span>
+                <h4 id="btn_cont" class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="toggle title"><span>Results:</span></div>
+                    <div class="title"><span id="long-short"></span></div>
                 </h4>
                 <ul class="list-group mb-3 sticky-top">
 

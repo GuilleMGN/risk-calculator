@@ -19,8 +19,12 @@ $(document).ready(function () {
         // Determine if position is Long or Short
         if (entryPrice < stopLoss) {
             const long = false;
+            $('#long-short').html(`Short`);
+            $('.title:nth-child(2)').css({"border-top-color": "#e2464a"});
         } else {
             const long = true;
+            $('#long-short').html(`Long`);
+            $('.title:nth-child(2)').css({"border-top-color": "#40ad9b"});
         }
 
         // Output results into HTML

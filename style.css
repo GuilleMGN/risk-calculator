@@ -1,10 +1,77 @@
 .toggle {
-    background-color: #181818 !important;
+    background-color: #111317 !important;
     color: white !important;
     border-color: whitesmoke;
 }
 
-.input-group-btn:not(:first-child):not(:last-child) > .btn {
+.input-group-title:not(:first-child):not(:last-child)>.title {
     border-radius: 0;
     height: 100%;
-  }
+}
+
+#btn_cont {
+    position: relative;
+    height: 17%;
+    padding-top: 10%;
+}
+
+.title {
+    display: block;
+    position: absolute;
+    float: left;
+    height: 0;
+    cursor: default;
+    color: black !important;
+    font-weight: 555;
+}
+
+/* Results Bar */
+.title:nth-child(1) {
+    border-bottom: 30px solid #f2f2f2;
+    border-right: 20px solid transparent;
+    border-bottom: 5%;
+    border-top-left-radius: 12px;
+    left: 0;
+    width: 55%;
+    z-index: 1;
+}
+
+/* Long/Short Bar */
+.title:nth-child(2) {
+    border-top: 30px solid #f2f2f2;
+    border-left: 20px solid transparent;
+    border-bottom: 5%;
+    border-top-right-radius: 12px;
+    right: 0;
+    width: 55%;
+    z-index: 2;
+}
+
+.title span {
+    position: relative;
+    float: left;
+    top: 7px;
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.title:nth-child(2) span {
+    top: -23px;
+}
+
+.btn-success {
+    background-color: #40ad9b;
+}
+
+.btn-success:hover {
+    background-color: #399989;
+}
+
+.btn-danger {
+    background-color: #e2464a;
+}
+
+.btn-danger:hover {
+    background-color: #b9393e;
+}
